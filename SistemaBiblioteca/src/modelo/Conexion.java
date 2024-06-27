@@ -11,9 +11,13 @@ public class Conexion {
     private String contrasena = "1234";
     private String bd = "Biblio";
     private String ip = "localhost";
-    private String puerto = "1433"; 
-    private String Conexionurl = "jdbc:sqlserver://" +ip+ ":"+puerto+";databaseName=" + bd + ";user=" + usuario + ";password=" + contrasena;
+    private String puerto = "1433";
+    private String Conexionurl;
     Connection conectar = null;
+    
+    public Conexion(){
+        Conexionurl = "jdbc:sqlserver://" +ip+ ":"+puerto+";databaseName=" + bd + ";user=" + usuario + ";password=" + contrasena;
+    }
     
     
     public Connection establecerConexion(){
