@@ -19,21 +19,21 @@ public class UsuarioControlador {
         String query = "SELECT * FROM usuarios WHERE usuario = ? AND clave = ?";
         Conexion conectarbd = new Conexion();
         Connection connection = conectarbd.establecerConexion();
-        PreparedStatement pstmt = null;
+        PreparedStatement ps = null;
         ResultSet rs = null;
         try {
             //Preparando consulta
-            pstmt = connection.prepareStatement(query);
+            ps = connection.prepareStatement(query);
             //ejecutando la consulta
-            pstmt.setString(1, usuario.getUsuario());
-            pstmt.setString(2, usuario.getClave());
+            ps.setString(1, usuario.getUsuario());
+            ps.setString(2, usuario.getClave());
             //comprobar si hay al menos un registro
             if (rs.next()) {
                 respuesta = true;
             }
             connection.close(); //para evitar fugas de datos
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error");
+            JOptionPane.showMessageDialog(null, "Error, "+e);
         }
         return respuesta;
     }
