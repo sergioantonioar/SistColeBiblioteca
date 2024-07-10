@@ -1,23 +1,12 @@
 package vista;
 
-import java.awt.Color;
-import java.awt.event.ItemEvent;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
-import java.util.List;
-import javax.swing.ImageIcon;
-import javax.swing.JButton;
-import javax.swing.JOptionPane;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
-import javax.swing.table.JTableHeader;
 
 public final class FrmPanel extends javax.swing.JFrame {
 
-    public FrmPanel(String user) {
-        //txt
+
+    public FrmPanel() {
+        initComponents();
+        this.setLocationRelativeTo(null);   
     }
 
     @SuppressWarnings("unchecked")
@@ -137,7 +126,6 @@ public final class FrmPanel extends javax.swing.JFrame {
         btnNuevoPrestamo = new javax.swing.JButton();
         cbxEstudiante = new javax.swing.JComboBox<>();
         cbxLibros = new javax.swing.JComboBox<>();
-        txtFechaDev = new com.toedter.calendar.JDateChooser();
         txtIdPrestamo = new javax.swing.JTextField();
         jLabel39 = new javax.swing.JLabel();
         jScrollPane7 = new javax.swing.JScrollPane();
@@ -198,7 +186,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnRegUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/save.png"))); // NOI18N
         btnRegUser.setText("Guardar");
-        btnRegUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegUser.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnRegUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegUserActionPerformed(evt);
@@ -207,7 +195,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnElUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
         btnElUser.setText("Eliminar");
-        btnElUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnElUser.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnElUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnElUserActionPerformed(evt);
@@ -216,7 +204,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnNuevoUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nuevo.png"))); // NOI18N
         btnNuevoUsuario.setText("Nuevo");
-        btnNuevoUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNuevoUsuario.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNuevoUsuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoUsuarioActionPerformed(evt);
@@ -289,7 +277,6 @@ public final class FrmPanel extends javax.swing.JFrame {
                 "Id", "Usuario", "Nombre", "Correo"
             }
         ));
-        tblUsuarios.setRowHeight(20);
         tblUsuarios.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblUsuariosMouseClicked(evt);
@@ -357,7 +344,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnEliEditorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
         btnEliEditorial.setText("Eliminar");
-        btnEliEditorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliEditorial.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEliEditorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliEditorialActionPerformed(evt);
@@ -366,7 +353,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnNuevoEditorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nuevo.png"))); // NOI18N
         btnNuevoEditorial.setText("Nuevo");
-        btnNuevoEditorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNuevoEditorial.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNuevoEditorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoEditorialActionPerformed(evt);
@@ -420,7 +407,6 @@ public final class FrmPanel extends javax.swing.JFrame {
                 "Id", "Editorial"
             }
         ));
-        tblEditorial.setRowHeight(20);
         tblEditorial.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblEditorialMouseClicked(evt);
@@ -462,7 +448,7 @@ public final class FrmPanel extends javax.swing.JFrame {
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtBuscarEditorial, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                        .addGap(18, 22, Short.MAX_VALUE)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane2))
                 .addGap(25, 25, 25))
@@ -480,7 +466,6 @@ public final class FrmPanel extends javax.swing.JFrame {
                 "Id", "Autor"
             }
         ));
-        tblAutor.setRowHeight(20);
         tblAutor.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblAutorMouseClicked(evt);
@@ -504,7 +489,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         txtEliAutor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
         txtEliAutor.setText("Eliminar");
-        txtEliAutor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        txtEliAutor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         txtEliAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEliAutorActionPerformed(evt);
@@ -513,7 +498,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnNuevoAutor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nuevo.png"))); // NOI18N
         btnNuevoAutor.setText("Nuevo");
-        btnNuevoAutor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNuevoAutor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNuevoAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoAutorActionPerformed(evt);
@@ -646,7 +631,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnRegLibro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/save.png"))); // NOI18N
         btnRegLibro.setText("Registrar");
-        btnRegLibro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegLibro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnRegLibro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegLibroActionPerformed(evt);
@@ -655,7 +640,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnEliLibro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
         btnEliLibro.setText("Eliminar");
-        btnEliLibro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliLibro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEliLibro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliLibroActionPerformed(evt);
@@ -769,7 +754,6 @@ public final class FrmPanel extends javax.swing.JFrame {
                 "Id", "Título", "Cantidad", "Num Página", "Año Edición", "", "Editorial", "", "Autor", "", "Materia"
             }
         ));
-        tblLibros.setRowHeight(20);
         tblLibros.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblLibrosMouseClicked(evt);
@@ -841,7 +825,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnEliMateria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
         btnEliMateria.setText("Eliminar");
-        btnEliMateria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliMateria.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEliMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliMateriaActionPerformed(evt);
@@ -850,7 +834,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnNuevoMateria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nuevo.png"))); // NOI18N
         btnNuevoMateria.setText("Nuevo");
-        btnNuevoMateria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNuevoMateria.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNuevoMateria.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoMateriaActionPerformed(evt);
@@ -907,7 +891,6 @@ public final class FrmPanel extends javax.swing.JFrame {
                 "Id", "Materia"
             }
         ));
-        tblMateria.setRowHeight(20);
         tblMateria.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblMateriaMouseClicked(evt);
@@ -949,7 +932,7 @@ public final class FrmPanel extends javax.swing.JFrame {
                         .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtBuscarMateria, javax.swing.GroupLayout.DEFAULT_SIZE, 35, Short.MAX_VALUE))
-                        .addGap(18, 20, Short.MAX_VALUE)
+                        .addGap(18, 18, Short.MAX_VALUE)
                         .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane6))
                 .addGap(25, 25, 25))
@@ -979,7 +962,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnRegEst.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/save.png"))); // NOI18N
         btnRegEst.setText("Guardar");
-        btnRegEst.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnRegEst.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnRegEst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegEstActionPerformed(evt);
@@ -988,7 +971,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnEliEst.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/eliminar.png"))); // NOI18N
         btnEliEst.setText("Eliminar");
-        btnEliEst.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnEliEst.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnEliEst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEliEstActionPerformed(evt);
@@ -997,7 +980,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnNuevoEst.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nuevo.png"))); // NOI18N
         btnNuevoEst.setText("Nuevo");
-        btnNuevoEst.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNuevoEst.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNuevoEst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoEstActionPerformed(evt);
@@ -1078,7 +1061,6 @@ public final class FrmPanel extends javax.swing.JFrame {
                 "Id", "Documento", "Código", "Nombre", "Teléfono", "Carrera"
             }
         ));
-        tblEstudientes.setRowHeight(20);
         tblEstudientes.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblEstudientesMouseClicked(evt);
@@ -1124,7 +1106,7 @@ public final class FrmPanel extends javax.swing.JFrame {
                             .addComponent(txtBuscarEst))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, 518, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane5, javax.swing.GroupLayout.DEFAULT_SIZE, 566, Short.MAX_VALUE))
+                    .addComponent(jScrollPane5))
                 .addGap(25, 25, 25))
         );
 
@@ -1151,7 +1133,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnPrestar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prestamo.png"))); // NOI18N
         btnPrestar.setText("Prestar");
-        btnPrestar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnPrestar.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnPrestar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPrestarActionPerformed(evt);
@@ -1160,7 +1142,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnNuevoPrestamo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/nuevo.png"))); // NOI18N
         btnNuevoPrestamo.setText("Nuevo");
-        btnNuevoPrestamo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnNuevoPrestamo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnNuevoPrestamo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnNuevoPrestamoActionPerformed(evt);
@@ -1197,20 +1179,19 @@ public final class FrmPanel extends javax.swing.JFrame {
                             .addComponent(cbxLibros, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(txtCantPrestamo)
                             .addComponent(cbxEstudiante, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel16Layout.createSequentialGroup()
-                        .addGap(59, 59, 59)
-                        .addComponent(jLabel39)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel16Layout.createSequentialGroup()
-                        .addComponent(jLabel27)
-                        .addGap(18, 18, 18)
-                        .addComponent(txtFechaDev, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel16Layout.createSequentialGroup()
+                                .addGap(59, 59, 59)
+                                .addComponent(jLabel39))
+                            .addComponent(jLabel27))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel16Layout.setVerticalGroup(
             jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel16Layout.createSequentialGroup()
-                .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel25)
@@ -1223,10 +1204,8 @@ public final class FrmPanel extends javax.swing.JFrame {
                 .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel28)
                     .addComponent(txtCantPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
-                .addGroup(jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel27)
-                    .addComponent(txtFechaDev, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
+                .addComponent(jLabel27)
                 .addGap(34, 34, 34)
                 .addComponent(txtIdPrestamo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1259,7 +1238,6 @@ public final class FrmPanel extends javax.swing.JFrame {
                 return canEdit [columnIndex];
             }
         });
-        tblPrestamo.setRowHeight(20);
         tblPrestamo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 tblPrestamoMouseClicked(evt);
@@ -1331,7 +1309,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         btnModificarEmpresa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editar.png"))); // NOI18N
         btnModificarEmpresa.setText("Modificar");
-        btnModificarEmpresa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnModificarEmpresa.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnModificarEmpresa.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModificarEmpresaActionPerformed(evt);
@@ -1432,7 +1410,7 @@ public final class FrmPanel extends javax.swing.JFrame {
             .addGroup(jPanel14Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel29, javax.swing.GroupLayout.DEFAULT_SIZE, 0, Short.MAX_VALUE)
+            .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("Contactos", jPanel14);
@@ -1442,7 +1420,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         MenuUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/usuario.png"))); // NOI18N
         MenuUser.setText("Usuarios");
-        MenuUser.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuUser.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MenuUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuUserActionPerformed(evt);
@@ -1452,7 +1430,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         MenuContactos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/contactos.png"))); // NOI18N
         MenuContactos.setText("Contactos");
-        MenuContactos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuContactos.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MenuContactos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuContactosActionPerformed(evt);
@@ -1464,7 +1442,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         MenuEst.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/estudiante.png"))); // NOI18N
         MenuEst.setText("Estudiantes");
-        MenuEst.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuEst.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MenuEst.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MenuEstMouseClicked(evt);
@@ -1477,7 +1455,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         MenuEditorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/editorial.png"))); // NOI18N
         MenuEditorial.setText("Editorial");
-        MenuEditorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuEditorial.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MenuEditorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuEditorialActionPerformed(evt);
@@ -1487,7 +1465,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         MenuAutor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/autor.png"))); // NOI18N
         MenuAutor.setText("Autor");
-        MenuAutor.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuAutor.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MenuAutor.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuAutorActionPerformed(evt);
@@ -1497,7 +1475,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         MenuLibro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/libros.png"))); // NOI18N
         MenuLibro.setText("Libros");
-        MenuLibro.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuLibro.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MenuLibro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MenuLibroActionPerformed(evt);
@@ -1509,7 +1487,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         MenuMateria.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/materia.png"))); // NOI18N
         MenuMateria.setText("Materia");
-        MenuMateria.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuMateria.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MenuMateria.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MenuMateriaMouseClicked(evt);
@@ -1519,7 +1497,7 @@ public final class FrmPanel extends javax.swing.JFrame {
 
         MenuPrestamo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/prestamo.png"))); // NOI18N
         MenuPrestamo.setText("Prestamos");
-        MenuPrestamo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        MenuPrestamo.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         MenuPrestamo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 MenuPrestamoMouseClicked(evt);
@@ -1549,189 +1527,223 @@ public final class FrmPanel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
+    
     private void MenuUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuUserActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_MenuUserActionPerformed
 
     private void MenuLibroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuLibroActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_MenuLibroActionPerformed
 
     private void MenuEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuEditorialActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_MenuEditorialActionPerformed
 
     private void MenuAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuAutorActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_MenuAutorActionPerformed
 
     private void btnRegUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegUserActionPerformed
-        //txt
+        //
     }//GEN-LAST:event_btnRegUserActionPerformed
 
     private void btnRegEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegEditorialActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnRegEditorialActionPerformed
 
     private void btnRegAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegAutorActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnRegAutorActionPerformed
 
     private void btnRegLibroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegLibroActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnRegLibroActionPerformed
 
     private void btnRegMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegMateriaActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnRegMateriaActionPerformed
 
     private void btnRegEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegEstActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnRegEstActionPerformed
 
     private void tblUsuariosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblUsuariosMouseClicked
-        //txt
+//        
     }//GEN-LAST:event_tblUsuariosMouseClicked
 
     private void tblEditorialMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblEditorialMouseClicked
-        //txt
+//        
     }//GEN-LAST:event_tblEditorialMouseClicked
 
     private void tblEstudientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblEstudientesMouseClicked
-        //txt
+//        
     }//GEN-LAST:event_tblEstudientesMouseClicked
 
     private void tblMateriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblMateriaMouseClicked
-        //txt
+//        
     }//GEN-LAST:event_tblMateriaMouseClicked
 
     private void tblLibrosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblLibrosMouseClicked
-        //txt
+//        
     }//GEN-LAST:event_tblLibrosMouseClicked
 
     private void tblAutorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblAutorMouseClicked
-        //txt
+//        
     }//GEN-LAST:event_tblAutorMouseClicked
 
     private void MenuEstMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuEstMouseClicked
-        //txt
+//        
     }//GEN-LAST:event_MenuEstMouseClicked
 
     private void MenuPrestamoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuPrestamoMouseClicked
-        //txt
+//        
     }//GEN-LAST:event_MenuPrestamoMouseClicked
 
     private void MenuContactosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MenuContactosActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_MenuContactosActionPerformed
 
     private void btnEliEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliEstActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnEliEstActionPerformed
 
     private void btnNuevoUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoUsuarioActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnNuevoUsuarioActionPerformed
 
     private void btnNuevoEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoEditorialActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnNuevoEditorialActionPerformed
 
     private void btnNuevoAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoAutorActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnNuevoAutorActionPerformed
 
     private void btnNuevoLibroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoLibroActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnNuevoLibroActionPerformed
 
     private void btnNuevoMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoMateriaActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnNuevoMateriaActionPerformed
 
     private void btnNuevoEstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoEstActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnNuevoEstActionPerformed
 
     private void btnElUserActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnElUserActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnElUserActionPerformed
 
     private void btnEliEditorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliEditorialActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnEliEditorialActionPerformed
 
     private void txtEliAutorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEliAutorActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_txtEliAutorActionPerformed
 
     private void btnEliLibroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliLibroActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnEliLibroActionPerformed
 
     private void btnEliMateriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliMateriaActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnEliMateriaActionPerformed
 
     private void btnModificarEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarEmpresaActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnModificarEmpresaActionPerformed
 
     private void btnPrestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrestarActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnPrestarActionPerformed
 
     private void btnNuevoPrestamoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoPrestamoActionPerformed
-        //txt
+//        
     }//GEN-LAST:event_btnNuevoPrestamoActionPerformed
 
     private void tblPrestamoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblPrestamoMouseClicked
-        //txt
+//        
     }//GEN-LAST:event_tblPrestamoMouseClicked
 
     private void txtBuscarUserKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarUserKeyReleased
-        //txt
+//        
     }//GEN-LAST:event_txtBuscarUserKeyReleased
 
     private void txtBuscarEditorialKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarEditorialKeyReleased
-        //txt
+//        
     }//GEN-LAST:event_txtBuscarEditorialKeyReleased
 
     private void txtBuscarAutorKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarAutorKeyReleased
-        //txt
+//        
     }//GEN-LAST:event_txtBuscarAutorKeyReleased
 
     private void txtBuscarLibroKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarLibroKeyReleased
-        //txt
+//        
     }//GEN-LAST:event_txtBuscarLibroKeyReleased
 
     private void txtBuscarMateriaKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarMateriaKeyReleased
-        //txt
+//        
     }//GEN-LAST:event_txtBuscarMateriaKeyReleased
 
     private void txtBuscarEstKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarEstKeyReleased
-        //txt
+//       
     }//GEN-LAST:event_txtBuscarEstKeyReleased
 
     private void txtBuscarPrestamoKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtBuscarPrestamoKeyReleased
-        //txt
+//        
     }//GEN-LAST:event_txtBuscarPrestamoKeyReleased
 
     private void MenuMateriaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_MenuMateriaMouseClicked
-        //txt
+//       
     }//GEN-LAST:event_MenuMateriaMouseClicked
 
     private void cbxAutorItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxAutorItemStateChanged
-        //txt
+    
     }//GEN-LAST:event_cbxAutorItemStateChanged
 
     private void cbxEditorialItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxEditorialItemStateChanged
-        //txt
+
     }//GEN-LAST:event_cbxEditorialItemStateChanged
 
     private void cbxMateriaItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cbxMateriaItemStateChanged
-        //txt
+//
     }//GEN-LAST:event_cbxMateriaItemStateChanged
+
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Windows".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(FrmPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(FrmPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(FrmPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(FrmPanel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+        //</editor-fold>
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new FrmPanel().setVisible(true);
+            }
+        });
+
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem MenuAutor;
@@ -1862,7 +1874,6 @@ public final class FrmPanel extends javax.swing.JFrame {
     private javax.swing.JTextField txtEditorial;
     private javax.swing.JButton txtEliAutor;
     private javax.swing.JTextField txtEstudiante;
-    private com.toedter.calendar.JDateChooser txtFechaDev;
     private javax.swing.JTextField txtIdAutor;
     private javax.swing.JTextField txtIdEditorial;
     private javax.swing.JTextField txtIdEmpresa;
@@ -1884,4 +1895,5 @@ public final class FrmPanel extends javax.swing.JFrame {
     private javax.swing.JTextField txtTitulo;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
+
 }
