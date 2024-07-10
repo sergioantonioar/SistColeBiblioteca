@@ -1,7 +1,7 @@
 package vista;
 
 
-public final class FrmPanel extends javax.swing.JFrame {
+public class FrmPanel extends javax.swing.JFrame {
 
 
     public FrmPanel() {
