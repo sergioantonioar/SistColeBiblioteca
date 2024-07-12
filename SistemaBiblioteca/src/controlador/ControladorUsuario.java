@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author SERGIO
  */
-public class UsuarioControlador {
+public class ControladorUsuario {
     
     
     

@@ -128,6 +128,7 @@ CREATE TABLE libros (
 );
 GO
 
+
 -- Volcado de datos para la tabla `libros`
 INSERT INTO libros (titulo, id_editorial, id_autor, id_materia, cantidad, num_pag, anio_edicion) VALUES
 ('EL GRAN LIBRO DE HTML5', 3, 4, 3, 10, 150, 2021),
@@ -190,3 +191,17 @@ INSERT INTO usuarios (usuario, nombre, correo, clave) VALUES
 ('JUAN', 'Juan Carlos', 'juan@gmail.com', '1234');
 GO
 select * from usuarios
+
+
+-- Libro
+SELECT li.id, li.titulo, li.cantidad, li.num_pag, li.anio_edicion, e.editorial, a.autor, m.materia
+FROM libros li
+JOIN editorial e ON li.id_editorial = e.id
+JOIN autor a ON li.id_autor = a.id
+JOIN materias m ON li.id_materia = m.id
+
+-- Prestamo
+SELECT pr.id, e.nombre, li.titulo, pr.cantidad, pr.fecha_prestamo, pr.fecha_devolucion, pr.estado
+FROM prestamos pr
+JOIN estudiantes e ON pr.id_estudiante = e.id
+JOIN libros li ON pr.id_libro = li.id

@@ -55,7 +55,6 @@ public class ControladorEditorial implements ActionListener, KeyListener, MouseL
                 JOptionPane.showMessageDialog(null, "Registro insertado correctamente");
                 limpiarCampos();
                 mostrarEditoriales();
-                vistaEditorial.tblEditorial.setModel(mostrarEditoriales());
             } else {
                 JOptionPane.showMessageDialog(null, "Error al insertar registro");
                 limpiarCampos();

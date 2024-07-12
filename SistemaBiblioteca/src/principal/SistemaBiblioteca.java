@@ -2,12 +2,15 @@ package principal;
 
 import controlador.ControladorAutor;
 import controlador.ControladorEditorial;
+import controlador.ControladorEstudiante;
 import controlador.ControladorMateria;
 import modelo.Autor;
 import modelo.ConsultasAutor;
 import modelo.ConsultasEditorial;
+import modelo.ConsultasEstudiante;
 import modelo.ConsultasMateria;
 import modelo.Editorial;
+import modelo.Estudiante;
 import modelo.Materia;
 import vista.FrmPanel;
 
@@ -41,7 +44,11 @@ public class SistemaBiblioteca {
         ControladorMateria controladorMateria = new ControladorMateria(vista, materia, modeloMateria);
         // ------------------
         
-        //-----MATERIA----
+        //-----ESTUDIANTE----
+        Estudiante estudiante = new Estudiante();
+        ConsultasEstudiante modeloEstudiante = new ConsultasEstudiante();
+        ControladorEstudiante controladorEstudiante = new ControladorEstudiante(vista, estudiante, modeloEstudiante);
+        // ------------------
         
         vista.setVisible(true);
         
