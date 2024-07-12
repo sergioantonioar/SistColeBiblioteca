@@ -23,7 +23,7 @@ public class Conexion {
     public Connection establecerConexion(){
         try{
             conectar = DriverManager.getConnection(Conexionurl);
-            JOptionPane.showMessageDialog(null, "conectado a la base de datos exitosamente.");
+            //JOptionPane.showMessageDialog(null, "conectado a la base de datos exitosamente.");
         }catch (Exception e){
             JOptionPane.showMessageDialog(null, "error no conectado: " + e.toString());
         }

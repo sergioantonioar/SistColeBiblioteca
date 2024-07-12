@@ -3,10 +3,10 @@ IF NOT EXISTS (SELECT * FROM sys.databases WHERE name = 'biblio')
 BEGIN
     CREATE DATABASE Biblio;
 END;
-GO
+
 
 USE Biblio;
-GO
+
 
 -- Base de datos: `biblio`
 
@@ -16,13 +16,13 @@ GO
 
 IF OBJECT_ID('autor', 'U') IS NOT NULL
 DROP TABLE autor;
-GO
+
 
 CREATE TABLE autor (
   id INT IDENTITY(1,1) PRIMARY KEY,
   autor NVARCHAR(150) NOT NULL
 );
-GO
+
 
 -- Volcado de datos para la tabla `autor`
 INSERT INTO autor (autor) VALUES
