@@ -192,6 +192,7 @@ INSERT INTO usuarios (usuario, nombre, correo, clave) VALUES
 GO
 select * from usuarios
 
+select id,usuario,nombre,correo from usuarios;
 
 -- Libro
 SELECT li.id, li.titulo, li.cantidad, li.num_pag, li.anio_edicion, e.editorial, a.autor, m.materia
