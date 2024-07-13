@@ -4,14 +4,17 @@ import controlador.ControladorAutor;
 import controlador.ControladorEditorial;
 import controlador.ControladorEstudiante;
 import controlador.ControladorMateria;
+import controlador.ControladorUsuario;
 import modelo.Autor;
 import modelo.ConsultasAutor;
 import modelo.ConsultasEditorial;
 import modelo.ConsultasEstudiante;
 import modelo.ConsultasMateria;
+import modelo.ConsultasUsuario;
 import modelo.Editorial;
 import modelo.Estudiante;
 import modelo.Materia;
+import modelo.Usuario;
 import vista.FrmPanel;
 
 /**
@@ -49,6 +52,12 @@ public class SistemaBiblioteca {
         ConsultasEstudiante modeloEstudiante = new ConsultasEstudiante();
         ControladorEstudiante controladorEstudiante = new ControladorEstudiante(vista, estudiante, modeloEstudiante);
         // ------------------
+        
+        //-----USURIO----
+        Usuario usuario = new Usuario();
+        ConsultasUsuario modeloUsuario = new ConsultasUsuario();
+        ControladorUsuario controladorUsuario = new ControladorUsuario(vista, usuario, modeloUsuario);
+        //---------------
         
         vista.setVisible(true);
         

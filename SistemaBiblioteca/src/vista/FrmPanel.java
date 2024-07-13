@@ -182,7 +182,7 @@ public class FrmPanel extends javax.swing.JFrame {
         jLabel4.setText("Contraseña");
 
         btnModUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/save.png"))); // NOI18N
-        btnModUser.setText("Guardar");
+        btnModUser.setText("Modificar");
         btnModUser.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         btnModUser.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
