@@ -18,7 +18,7 @@ public class ConsultasEstudiante extends Conexion {
             ps = conexion.prepareStatement("INSERT INTO estudiantes (documento,codigo,nombre,telefono,nivel,grado,seccion) VALUES (?,?,?,?,?,?,?)"); // lo que se va a insertar
 
             //completando los ?
-            ps.setString(1, estudiante.getNombre());
+            ps.setString(1, estudiante.getDocumento());
             ps.setString(2, estudiante.getCodigo());
             ps.setString(3, estudiante.getNombre());
             ps.setString(4, estudiante.getTelefono());

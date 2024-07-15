@@ -1,13 +1,12 @@
-package modelo;
 
+package Modelo;
 public class Autor {
     private int id;
     private String autor;
 
     public Autor() {
-    }
+    } 
 
-    
     public Autor(int id, String autor) {
         this.id = id;
         this.autor = autor;
@@ -28,7 +27,6 @@ public class Autor {
     public void setAutor(String autor) {
         this.autor = autor;
     }
-    
     @Override
     public String toString(){
         return this.getAutor();

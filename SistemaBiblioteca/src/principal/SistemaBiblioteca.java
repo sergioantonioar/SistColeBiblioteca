@@ -3,16 +3,19 @@ package principal;
 import controlador.ControladorAutor;
 import controlador.ControladorEditorial;
 import controlador.ControladorEstudiante;
+import controlador.ControladorLibro;
 import controlador.ControladorMateria;
 import controlador.ControladorUsuario;
 import modelo.Autor;
 import modelo.ConsultasAutor;
 import modelo.ConsultasEditorial;
 import modelo.ConsultasEstudiante;
+import modelo.ConsultasLibro;
 import modelo.ConsultasMateria;
 import modelo.ConsultasUsuario;
 import modelo.Editorial;
 import modelo.Estudiante;
+import modelo.Libro;
 import modelo.Materia;
 import modelo.Usuario;
 import vista.FrmPanel;
@@ -57,6 +60,12 @@ public class SistemaBiblioteca {
         Usuario usuario = new Usuario();
         ConsultasUsuario modeloUsuario = new ConsultasUsuario();
         ControladorUsuario controladorUsuario = new ControladorUsuario(vista, usuario, modeloUsuario);
+        //---------------
+        
+        //-----USURIO----
+        Libro libro = new Libro();
+        ConsultasLibro  modeloLibro = new ConsultasLibro();
+        ControladorLibro controladorLibro = new ControladorLibro(vista, libro, modeloLibro);
         //---------------
         
         vista.setVisible(true);

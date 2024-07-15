@@ -162,9 +162,9 @@ GO
 
 -- Volcado de datos para la tabla `prestamos`
 INSERT INTO prestamos (id_estudiante, id_libro, cantidad, fecha_prestamo, fecha_devolucion, estado) VALUES
-(1, 3, 5, '29/11/2024', '29/11/2024', 0),
-(1, 2, 20, '29/11/2024', '30/11/2024', 0),
-(1, 5, 20, '29/11/2024', '03/12/2024', 0);
+(1, 3, 5, '10/07/2024', '22/07/2024', 0),
+(1, 2, 20, '10/07/2024', '20/07/2024', 0),
+(1, 5, 20, '15/07/2024', '03/08/2024', 0);
 GO
 select*from prestamos
 

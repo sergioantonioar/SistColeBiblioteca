@@ -1,5 +1,7 @@
 package vista;
 
+import modelo.Autor;
+
 
 
 public class FrmPanel extends javax.swing.JFrame {
@@ -1627,13 +1629,13 @@ public class FrmPanel extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenuItem MenuAutor;
-    private javax.swing.JMenuItem MenuEditorial;
-    private javax.swing.JMenu MenuEst;
-    private javax.swing.JMenuItem MenuLibro;
-    private javax.swing.JMenu MenuMateria;
+    public javax.swing.JMenuItem MenuAutor;
+    public javax.swing.JMenuItem MenuEditorial;
+    public javax.swing.JMenu MenuEst;
+    public javax.swing.JMenuItem MenuLibro;
+    public javax.swing.JMenu MenuMateria;
     private javax.swing.JMenu MenuPrestamo;
-    private javax.swing.JMenuItem MenuUser;
+    public javax.swing.JMenuItem MenuUser;
     public javax.swing.JButton btnEliAutor;
     public javax.swing.JButton btnEliEditorial;
     public javax.swing.JButton btnEliEst;
@@ -1693,9 +1695,9 @@ public class FrmPanel extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu5;
-    private javax.swing.JMenuBar jMenuBar1;
+    public javax.swing.JMenu jMenu1;
+    public javax.swing.JMenu jMenu5;
+    public javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;

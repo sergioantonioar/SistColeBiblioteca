@@ -1,4 +1,5 @@
-package modelo;
+
+package Modelo;
 
 public class Estudiante {
     private int id;
@@ -87,5 +88,6 @@ public class Estudiante {
     public void setSeccion(String seccion) {
         this.seccion = seccion;
     }
+
     
 }

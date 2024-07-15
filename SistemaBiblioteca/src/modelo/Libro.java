@@ -1,4 +1,5 @@
-package modelo;
+
+package Modelo;
 
 public class Libro {
     private int id;
@@ -117,5 +118,7 @@ public class Libro {
     public void setMateria_nombre(String materia_nombre) {
         this.materia_nombre = materia_nombre;
     }
+
+    
     
 }

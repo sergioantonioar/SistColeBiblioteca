@@ -1,4 +1,5 @@
-package modelo;
+
+package Modelo;
 
 public class Editorial {
     private int id;
@@ -27,9 +28,8 @@ public class Editorial {
     public void setEditorial(String editorial) {
         this.editorial = editorial;
     }
-    
     @Override
     public String toString(){
-        return getEditorial();
+        return this.getEditorial();
     }
 }
